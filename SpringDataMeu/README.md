@@ -3,6 +3,8 @@ SPRING DATA
 
 autor: José Luis Villaverde jlvbalsa@gmail.com
 
+Create tables with db.sql
+
 
 
 
