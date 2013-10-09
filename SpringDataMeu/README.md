@@ -3,10 +3,10 @@ SPRING DATA && SPRING MVC && MYSQL && MAVEN
 
 autor: José Luis Villaverde jlvbalsa@gmail.com
 
-Create tables with db.sql
-IDE:NetBeans7.3.1
-JDK 1.7
-Maven
+    -Create tables with db.sql
+    -IDE:NetBeans7.3.1
+    -JDK 1.7
+    -Maven
 
 
 
