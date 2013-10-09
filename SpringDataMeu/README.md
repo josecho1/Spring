@@ -7,6 +7,8 @@ autor: José Luis Villaverde jlvbalsa@gmail.com
     -IDE:NetBeans7.3.1
     -JDK 1.7
     -Maven
+    -Servlet 3.0.1
+    -Spring spring-webmvc 3.2.2 RELEASE
 
 
 
