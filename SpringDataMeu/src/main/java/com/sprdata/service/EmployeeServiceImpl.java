@@ -39,6 +39,7 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 public class EmployeeServiceImpl implements EmployeeService{
     
+    // JPA
     @Resource
     private EmployeeRepository employeeRepository;
 
@@ -76,7 +77,7 @@ public class EmployeeServiceImpl implements EmployeeService{
         if (updateEmployee==null)
             throw new EmployeeNotFound();
         
-        // Pendente upateeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        // Not finish upate
         
         updateEmployee.setName(employee.getName());
         updateEmployee.setSalary(employee.getSalary());

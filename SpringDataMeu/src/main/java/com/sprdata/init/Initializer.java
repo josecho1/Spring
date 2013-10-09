@@ -32,18 +32,40 @@ import org.springframework.web.servlet.DispatcherServlet;
  *
  * @author José Luis Villaverde jlvbalsa@gmail.com
  */
+
+
+//The new builds atop Servlet 3.0's WebApplicationInitializer
+//ServletContainerInitializer support to provide a programmatic alternative to the traditional web.xml.
+//See org.springframework.web.WebApplicationInitializer Javadoc
+//An abstract base class implementation of the WebApplicationInitializer interface is
+//provided to simplify code-based registration of a DispatcherServlet and filters mapped to it.
+//WebApplicationInitializer is an interface provided by Spring MVC that ensures your code-based
+//configuration is detected and automatically used to initialize any Servlet 3 container
+// If using Servlet 3, Java based configuration, e.g. via WebApplicationInitializer, you'll also need
+//to set the "asyncSupported" flag as well as the ASYNC dispatcher type just like with web.xml.
 public class Initializer implements WebApplicationInitializer {
 
 	private static final String DISPATCHER_SERVLET_NAME = "dispatcher";
 
 	public void onStartup(ServletContext servletContext)
 			throws ServletException {
+            
+//                A WebApplicationContext variant of AnnotationConfigApplicationContext is available
+//with AnnotationConfigWebApplicationContext. This implementation may be used
+//when configuring the Spring ContextLoaderListener servlet listener, Spring MVC
+//DispatcherServlet, etc.
 		AnnotationConfigWebApplicationContext ctx = new AnnotationConfigWebApplicationContext();
 		ctx.register(WebAppConfig.class);
 		servletContext.addListener(new ContextLoaderListener(ctx));
-
 		ctx.setServletContext(servletContext);
-
+                
+//                Spring's web MVC framework is, like many other web MVC frameworks, request-driven, designed
+//around a central Servlet that dispatches requests to controllers and offers other functionality that
+//facilitates the development of web applications. Spring's DispatcherServlet however, does more
+//than just that. It is completely integrated with the Spring IoC container and as such allows you to use
+//every other feature that Spring has.
+//                 In a Servlet 3.0+ environment, you also have the
+//option of configuring the Servlet container programmatically.
 		Dynamic servlet = servletContext.addServlet(DISPATCHER_SERVLET_NAME,
 				new DispatcherServlet(ctx));
 		servlet.addMapping("/");
