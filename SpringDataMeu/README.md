@@ -10,6 +10,7 @@ Maven
 
 
 
+
 Copyright 2013 José Luis Villaverde Balsa.
 
         This file is part of SpringDataMeu.
@@ -28,4 +29,4 @@ Copyright 2013 José Luis Villaverde Balsa.
         along with Foobar.  If not, see <http://www.gnu.org/licenses/>.
 
 
-Dependencies:
+
