@@ -22,6 +22,7 @@ package com.sprdata.controller;
 
 import com.sprdata.init.exception.EmployeeNotFound;
 import com.sprdata.model.Employee;
+import com.sprdata.repository.EmployeeRepository;
 import com.sprdata.service.EmployeeService;
 import com.sprdata.validation.EmployeeValidator;
 import java.util.List;
@@ -45,6 +46,10 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 @Controller
 @RequestMapping(value="/employee")
 public class EmployeeController {
+    
+    
+    @Autowired EmployeeRepository employeeRepository;
+    
     
     @Autowired
     private EmployeeService employeeService;
@@ -79,6 +84,7 @@ public class EmployeeController {
 	redirectAttributes.addFlashAttribute("message", message);	
         return mav;		
     }
+    
     
     @RequestMapping(value="/list", method=RequestMethod.GET)
     public ModelAndView employeeListPage() {

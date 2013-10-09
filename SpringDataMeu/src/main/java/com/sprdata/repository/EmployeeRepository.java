@@ -28,5 +28,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * @author José Luis Villaverde jlvbalsa@gmail.com
  */
 public interface EmployeeRepository extends JpaRepository<Employee, Integer>{
-    
+   
 }

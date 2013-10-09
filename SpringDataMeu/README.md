@@ -1,10 +1,12 @@
-SPRING DATA
-===========
+SPRING DATA && SPRING MVC && MYSQL && MAVEN
+===========================================
 
 autor: José Luis Villaverde jlvbalsa@gmail.com
 
 Create tables with db.sql
-
+IDE:NetBeans7.3.1
+JDK 1.7
+Maven
 
 
 
@@ -24,3 +26,6 @@ Copyright 2013 José Luis Villaverde Balsa.
 
         You should have received a copy of the GNU General Public License
         along with Foobar.  If not, see <http://www.gnu.org/licenses/>.
+
+
+Dependencies:
